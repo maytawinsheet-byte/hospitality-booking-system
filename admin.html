@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Kanit',sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      display:flex;
+      min-height:100vh;
+    }
+
+    .sidebar{
+      width:260px;
+      background:#111827;
+      padding:24px;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:800;
+      margin-bottom:30px;
+    }
+
+    .menu{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .menu a{
+      text-decoration:none;
+      color:white;
+      background:#1f2937;
+      padding:14px 16px;
+      border-radius:14px;
+    }
+
+    .content{
+      flex:1;
+      padding:30px;
+    }
+
+    .title{
+      font-size:32px;
+      margin-bottom:24px;
+      font-weight:700;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:24px;
+      border-radius:20px;
+    }
+
+    .card h3{
+      font-size:16px;
+      opacity:.7;
+      margin-bottom:10px;
+    }
+
+    .card .value{
+      font-size:34px;
+      font-weight:800;
+    }
+
+    @media(max-width:768px){
+
+      body{
+        flex-direction:column;
+      }
+
+      .sidebar{
+        width:100%;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+
+    <div class="logo">
+      ADMIN PANEL
+    </div>
+
+    <div class="menu">
+      <a href="#">📊 Dashboard</a>
+      <a href="#">📅 ปฏิทินการจอง</a>
+      <a href="#">📝 รายการจอง</a>
+      <a href="#">➕ สร้างรายการจอง</a>
+      <a href="#">🍽️ เมนูอาหาร</a>
+      <a href="#">🎫 Event</a>
+      <a href="#">👥 ลูกค้า / CRM</a>
+      <a href="#">📈 รายงาน</a>
+      <a href="#">⚙️ ตั้งค่าระบบ</a>
+    </div>
+
+  </div>
+
+  <div class="content">
+
+    <div class="title">
+      Dashboard
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>ยอดจองวันนี้</h3>
+        <div class="value">28</div>
+      </div>
+
+      <div class="card">
+        <h3>รายได้วันนี้</h3>
+        <div class="value">฿84K</div>
+      </div>
+
+      <div class="card">
+        <h3>Pending</h3>
+        <div class="value">6</div>
+      </div>
+
+      <div class="card">
+        <h3>VIP Booking</h3>
+        <div class="value">12</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
