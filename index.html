@@ -1,78 +1,249 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hospitality Booking System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Hospitality Booking System</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Kanit',sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    body{
-      background:#0f172a;
-      color:white;
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:20px;
-    }
+<style>
 
-    .card{
-      background:#1e293b;
-      padding:40px;
-      border-radius:24px;
-      width:100%;
-      max-width:600px;
-      box-shadow:0 10px 40px rgba(0,0,0,.4);
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Kanit',sans-serif;
+}
 
-    h1{
-      font-size:36px;
-      margin-bottom:16px;
-    }
+body{
+  background:#0f172a;
+  color:white;
+}
 
-    p{
-      opacity:.8;
-      line-height:1.7;
-    }
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#111827;
+  padding:18px 24px;
 
-    .badge{
-      margin-top:24px;
-      display:inline-block;
-      background:#22c55e;
-      color:#000;
-      padding:10px 18px;
-      border-radius:999px;
-      font-weight:700;
-    }
-  </style>
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:800;
+}
+
+.menu{
+  display:flex;
+  gap:14px;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+}
+
+.hero{
+  min-height:80vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  padding:40px 20px;
+}
+
+.hero-box{
+  max-width:800px;
+}
+
+.hero h1{
+  font-size:56px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:20px;
+  opacity:.8;
+  line-height:1.7;
+}
+
+.buttons{
+  margin-top:30px;
+
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:16px 26px;
+  border-radius:16px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.btn-primary{
+  background:#22c55e;
+  color:black;
+}
+
+.btn-secondary{
+  background:#1e293b;
+  color:white;
+}
+
+.section{
+  padding:80px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.title{
+  font-size:38px;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#1e293b;
+  padding:24px;
+  border-radius:24px;
+}
+
+.card h3{
+  margin-bottom:12px;
+}
+
+footer{
+  padding:40px 20px;
+  text-align:center;
+  opacity:.6;
+}
+
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .menu{
+    display:none;
+  }
+
+}
+
+</style>
 </head>
 <body>
 
-  <div class="card">
-    <h1>Hospitality Booking System</h1>
+<header>
+
+  <div class="logo">
+    Hospitality Booking
+  </div>
+
+  <div class="menu">
+    <a href="#">หน้าแรก</a>
+    <a href="#">อีเวนต์</a>
+    <a href="#">จองโต๊ะ</a>
+    <a href="#">ติดต่อเรา</a>
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <div class="hero-box">
+
+    <h1>
+      ระบบจองโต๊ะระดับ Premium
+    </h1>
 
     <p>
       ระบบจองโต๊ะ / Event / VIP / CRM<br>
-      Production Version v2
+      รองรับร้านอาหาร ผับ Rooftop และ Event
     </p>
 
-    <div class="badge">
-      SYSTEM READY
+    <div class="buttons">
+
+      <a href="#" class="btn btn-primary">
+        เริ่มจองโต๊ะ
+      </a>
+
+      <a href="admin.html" class="btn btn-secondary">
+        เข้าสู่ระบบแอดมิน
+      </a>
+
     </div>
+
   </div>
+
+</section>
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="title">
+      ฟีเจอร์หลัก
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>📅 ระบบจองโต๊ะ</h3>
+        <p>เลือกโต๊ะจากผังจริง พร้อมสถานะ Real-time</p>
+      </div>
+
+      <div class="card">
+        <h3>🎫 Event Booking</h3>
+        <p>รองรับ Event / Concert / VIP Package</p>
+      </div>
+
+      <div class="card">
+        <h3>📊 Dashboard</h3>
+        <p>ดูยอดจอง รายได้ และกราฟสรุป</p>
+      </div>
+
+      <div class="card">
+        <h3>🔔 Notification</h3>
+        <p>แจ้งเตือนผ่าน LINE / Telegram / Email</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  Hospitality Booking System Production v2
+</footer>
 
 </body>
 </html>
